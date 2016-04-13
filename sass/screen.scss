@@ -1,0 +1,222 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@charset "utf-8";
+
+@import "compass/reset";
+@import "compass/css3";
+@mixin fs($size,$color:inherit){
+	font-size:$size;
+	color:$color;
+};
+@mixin wh($width:100%,$height:100%){
+	width:$width;
+	height:$height;
+};
+*{	
+ 	@include box-sizing(border-box);margin:0;padding:0;
+	font-family:"Microsoft YaHei" !important;
+	}
+	a{text-decoration: none;}
+input,textarea{
+-webkit-appearance: none;
+outline: none;
+border:0;
+}
+ul,li{list-style: none;}
+body{width:100%;max-width: 640px;margin:0 auto;}
+#task_list{
+	.lucky_task{
+		@include fs(.28rem);
+		position: absolute;
+		right: .26rem;
+	}
+#slider{
+	width:100%;max-width:640px;height:1.2rem;overflow:hidden;
+	li{width:100%;}
+	img{width:100%;}}
+.content>div{
+		@include border-radius(.2rem);
+		background: #fff;
+		padding:.24rem .14rem;
+		@include wh(6.08rem);
+		margin:.12rem auto 0;
+		@include box-shadow(0px 0px 10px 0px #e9f1fd,0px 0px 10px 0px #e9f1fd);
+		.list_title{
+			@include  wh(100%,.65rem);
+			@include fs(.28rem,#677994);
+			line-height: .65rem;
+			position:relative;
+			img{@include wh(.62rem,.62rem);@include border-radius(50%);line-height: .65rem;vertical-align: top;margin-right:.05rem;}
+		}
+	}
+p.title{
+	@include fs(.28rem,#677994);
+	margin:.2rem 0;
+}
+p.info{
+	@include fs(.22rem,#9ba3b1);
+	line-height: 1.5;
+}
+.task_money{
+		background:#ff6868;
+		right:-.2rem;
+		top:0;
+		padding:0 .16rem;
+		color:#fff;
+		min-width: 1rem;
+		@include border-radius(5px 0 0 5px);
+		position:absolute;
+	}
+.progress_bar{
+		@include wh(100%,.2rem);
+		overflow:hidden;
+		margin:.3rem 0 .16rem;
+		p{@include fs(.22rem,#677994);float: left;}
+
+	}
+.progress_bar_content{
+		@include wh(5.2rem,100%);
+		background:#c2d8fa;//#85b2f6;//
+		@include border-radius(.20rem);
+		float:left;
+		margin-right: .12rem;
+	}
+.bar{
+	background-color: #85b2f6;
+	@include border-radius(.20rem);
+	width:20%;
+	height:100%;
+	}
+.triangle{
+	display:block;
+	@include wh(0,0);
+	border-right:.06rem solid transparent;   
+	border-bottom: .06rem solid transparent;   
+	border-left: .06rem solid #b6342f;
+	position:absolute;
+	right:-.05rem;
+	bottom:-.05rem;
+	}
+.task_classification{
+	overflow: hidden;
+	width:6.08rem;
+	margin:.1rem auto;
+	padding:.1rem;
+
+		a{
+			@include wh(1.42rem,.54rem);
+			@include border-radius(.20rem);
+			@include box-shadow(0px 0px 10px 0px #e9f1fd,0px 0px 10px 0px #e9f1fd);
+			@include fs(.24rem,#85b2f6);
+			line-height: .54rem;
+			float:left;
+			text-align: center;
+			&:nth-child(2){margin:0 0.8rem;};
+		}
+	}
+}
+.footer{
+	@include wh(100%,.88rem);
+	position:fixed;
+	z-index: 5;
+	@include box-shadow(0px -6px 10px 0px #e9f1fd);
+	//overflow: hidden;
+	bottom:0;
+	&>a{
+		@include wh(33.3%,100%);
+		@include fs(.18rem,#677994);
+		padding-top:.08rem;
+		display:block;
+		float:left;
+		text-align:center;
+		line-height: 1.5;
+	}
+	.radius{
+		//position:absolute;
+		@include wh(1.06rem,1.06rem);
+		@include border-radius(50%);
+		@include box-shadow(0px 0px 10px 0px #e9f1fd,0px 0px 10px 0px #e9f1fd);
+		margin:-.18rem auto 0;
+		line-height: 1.06rem;
+		@include fs(1rem,#b5bdcc);
+		i{line-height: 2}
+		}
+}
+.icon-icon1460189708222{
+	//font-size://
+}
+
+
+//originationg_task.html//
+
+#originationg{
+	.normal_ontions{
+		padding: .1rem 0 0 .15rem;
+		@include box-shadow(0px 6px 10px 3px #e9f1fd);
+		& > div{
+			border-bottom:1px solid #b5bdcc;
+			@include fs(.28rem,#b5bdcc);
+			overflow: hidden;
+			position:relative;
+			&:last-child{
+				border-bottom-width:0;
+			};
+		}
+	}
+	#subject,#details{
+		border-width:0;
+		@include fs(.28rem,#b5bdcc);
+		width:76%;
+	}
+	#subject{
+		$h:.75rem;
+		height:$h;
+		line-height: $h;
+	}
+	#details{
+		resize:none;
+		height:2.06rem;
+		margin-left: 1.35rem;
+	}
+	label{font-weight: 700;margin-right:.8rem;color:#677994;}
+	label[for="details"]{
+		position:absolute;
+		top:.22rem;
+	}
+	label[for="upload_ictures"]{
+		line-height: .75rem;
+	}
+	.details_content{padding-top: .18rem}
+	#upload_ictures{height:.75rem;padding:.25rem;float: right;}
+}
+.senior{
+	@include fs(.28rem,#677994);
+	ul{padding-left:.15rem;@include box-shadow(0px 6px 10px 3px #e9f1fd);}
+	li{padding:.25rem 0;a{@include fs(.22rem,#85b2f6);text-decoration: underline;}}
+	.hl{border-bottom:1px solid #b5bdcc;border-top:1px solid #b5bdcc;}
+	.ll{border-bottom:1px solid #85b2f6;width:6rem;}
+	.ls{padding:.18rem 0 .22rem !important;}
+	.radius{
+		@include wh(.4rem,.4rem);
+		@include border-radius(50%);
+		@include box-shadow(0px 0px 10px 0px #e9f1fd,0px 0px 10px 0px #e9f1fd);
+		border:1px solid #85b2f6;
+		float:right;
+		margin-right: .2rem;
+	}
+	.sp{font-weight: 700}
+	#number,#money{width:73%;text-align: right;margin-right: .2rem;}
+	input{@include fs(.28rem,#b5bdcc)}
+	p{@include fs(.22rem,#b5bdcc);margin-bottom:.2rem;}
+	small{@include fs(.22rem,#b5bdcc);}
+}
+.account{
+	text-align: center;
+	padding-top:.22rem;
+	strong{@include fs(.68rem,#677994);span{font-size: .58rem}}
+	p{@include fs(.22rem,#b5bdcc);margin:.22rem 0 .68rem;}
+	a{display: block;@include wh(5.12rem,.8rem);margin:0 auto .46rem;@include fs(.34rem,#fff);background:#85b2f6;line-height: .8rem;@include border-radius(.8rem)}
+}

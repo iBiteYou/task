@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>发起任务</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="stylesheets/screen.css">
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1460524900_224704.css">
+	<script  src="javascripts/zepto.js"></script>
+	<script  src="javascripts/vue.js"></script>
+	<script src="javascripts/conf/config.js"></script>
+</head>
+<body>
+<section id="originationg">
+	<section class="normal_ontions">
+		<div><label for="subject">主题</label><input type="text" id="subject" placeholder="输入主题内容（必填）" /></div>
+		<div class="details_content"><label for="details">详情</label><textarea id="details" rows="3" cols="20" placeholder="输入主题内容（必填）"></textarea><!-- <input type="text" id="details" placeholder="输入详情（必填）" /> --></div>
+		<div><label for="upload_ictures">图片</label><input id="upload_ictures" type="file" /></div>
+	</section>
+	<section class="senior">
+		<header>
+			<span class="sp">高级</span>
+			<ol>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</header>
+		<ul>
+			<li class="hl"><span class="sp">公开</span><div class="radius"></div><div class="radius"></div></li>
+			<li class="ll"><span class="sp">红包个数</span><input id=number type="text" placeholder="填写个数"/>个</li>
+			<li class="ll ls"><p>可接任务人数</p><span class="sp">单个金额</span><input type="text" placeholder="填写金额" id="money"/>元</li>
+			<li><small>当前为普通红包，</small><a href="#">改为拼手气红包</a></li>
+		</ul>
+	</section>
+	<section class="account">
+		<strong>$<span>0.00</span></strong>
+		<p>当前账户余额：<small>$20</small></p>
+		<a href="#">提交</a>
+	</section>
+</section>
+</body>
+<script src="javascripts/url/url.js"></script>
+<script src="javascripts/cookie.js/cookie.js"></script>
+<script  src="javascripts/logingWatch.js"></script>
+<script src="javascripts/bin/originating.js"></script>
+<script src="javascripts/response.js"></script>
+</html>
